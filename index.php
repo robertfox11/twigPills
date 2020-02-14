@@ -20,8 +20,13 @@ $news = Array (
         "new" => "El COI no contempla el traslado de los Juegos de Tokio", 
         "datetime" => date('Y-m-d'), 
         "description" => "El organismo asegura que la mayoría de estrellas chinas están entrenando fuera de su país",
-    ) 
+    ),
+    Array ( 
+        "new" => "El COI no contempla el traslado de los Juegos de Tokio", 
+        "datetime" => date('Y-m-d'), 
+        "description" => "El organismo asegura que la mayoría de estrellas chinas están entrenando fuera de su país",
+    ), 
 );
-$who = "hola cabrones";
+$who = "TWIG";
 
 echo $twig->render('news.html.twig', compact('who', 'news'));

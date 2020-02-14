@@ -27,6 +27,8 @@
                 </span>
             </div>
         </nav>
+{# Realizamo un filtro de ejemplo para que who e eleminando el tags y Twig la primera palabra aparece en mayuscula #}
+<h1>{{ who|striptags|title }}</h1>
     <div id="content">{% block content %}{% endblock %}</div>
     {% block form %}
     {% endblock form %}
