@@ -2,7 +2,7 @@
 
 {% block title %}Index{% endblock %}
 {% block head %}
-    {{ parent() }}
+    
     <style type="text/css">
         .important { color: #336699; }
     </style>
@@ -15,20 +15,11 @@
 {% block form %}
     <div>
         <form>
-            {% import "formulario.html.twig" as forms %}
+            {% import "macros.twig" as forms %}
             <p>Name{{ forms.input('username') }}</p>
             <p>Email{{ forms.input('email', email, 'email') }}</p>
             <p>Number{{ forms.input('number', number, 'number') }}</p>
             <p>Password{{ forms.input('password', null, 'password') }}</p>
-        
         </form>
     </div>
 {% endblock %}
-
-
-{# {% macro form input(name, value, type, size) %}
-    <input type="{{ type|default('text') }}"
-             name="{{ name }}"
-             value="{{ value|e }}"
-             size="{{ size|default(20) }}" />
-{% endmacro %} #}

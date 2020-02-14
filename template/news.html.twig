@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block sidebar %}
+    {{ parent() }}
+    {% if news|length > 0 %}   
+    <h1>News</h1>
+         {% for new in news %}
+        <h2>Title {{ new.new|e }}</h2>
+        <p>Description  {{ new.description|e }}</p>
+        <p>Date  {{ new.datetime|e }}</p>
+        {% endfor %}
+    .{% endif %}
+    
+{% endblock %}
